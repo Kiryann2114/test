@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import GraphPage from "@/app/graph/page";
 
 export default function Home() {
   return (
