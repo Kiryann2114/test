@@ -1,0 +1,126 @@
+.component{
+    width:995px;
+    height:476px;
+    background: white;
+    display: grid;
+    grid-template-rows: 76px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+.panelGraph{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    border-radius: 27px;
+    background: rgba(255, 0, 245, 0.05);
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+.total{
+    width:61px;
+    height:280px;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: grid;
+    gap: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Manrope', sans-serif;
+}
+.gamburger{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+}
+.menu_button{
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    width:380px;
+    height:48px;
+    border-radius: 28px;
+    border: 2px solid rgba(0, 10, 255, 1);
+    background: white;
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Manrope', sans-serif;
+}
+.button_text{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    margin-left: 20px;
+    margin-top: 6px;
+    text-align: left;
+}
+.iconmenu{
+    width:24px;
+    height:16px;
+    margin-top: 13px;
+    grid-column-start: 2;
+}
+.menu_button:hover {
+    color: rgba(0, 10, 255, 1);
+}
+.menu{
+    width:380px;
+    border-radius: 28px;
+    border: 2px solid rgba(0, 10, 255, 1);
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+.menu_active{
+    width:380px;
+    border-radius: 28px;
+    border: 2px solid rgba(0, 10, 255, 1);
+    background: white;
+    opacity: 1;
+    visibility: visible;
+}
+.menu_list{
+    margin-left: 1px;
+    padding: 10px;
+}
+.menu_item{
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Manrope', sans-serif;
+    padding: 10px;
+    visibility: visible;
+}
+.menu_item:hover{
+    color: rgba(0, 10, 255, 1);
+}
+.ProgBars{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width:810px;
+    height:275px;
+    margin-top: 15px;
+    margin-left: 26px;
+    color: black;
+}
+.ProgBar{
+    display: grid;
+    grid-template-columns: repeat(31,25px);
+    grid-template-rows: 1fr;
+}
+.NumberProg{
+    width:62px;
+    height:24px;
+    background: rgba(101, 255, 142, 1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NumberProgBar{
+    width:16px;
+    height:275px;
+    background: rgba(0, 10, 255, 1);
+    border-radius: 4px;
+    margin-left: 23px;
+}

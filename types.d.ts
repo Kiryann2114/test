@@ -34,6 +34,7 @@ interface Graph {
 }
 
 interface Year {
+    [key: string]: string;
     January: any
     February: any
     March: any
@@ -49,6 +50,7 @@ interface Year {
 }
 
 interface HalfYear {
+    [key: string]: string;
     January: any
     February: any
     March: any
@@ -58,6 +60,7 @@ interface HalfYear {
 }
 
 interface Month {
+    [key: string]: string;
     "1": any
     "2": any
     "3": any
