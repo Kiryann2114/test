@@ -1,5 +1,5 @@
 "use client";
-import styles from "@/styles/GraphStyle.module.css";
+import styles from "@/styles/GraphStyle.module.scss";
 import {useState} from "react";
 
 function MenuActive(isOpen:boolean) {
@@ -10,8 +10,7 @@ function MenuActive(isOpen:boolean) {
 }
 
 export default function Burger() {
-
-    const [isOpen,setOpen] = useState(false)
+    const [isOpen, setOpen] = useState(false)
     const [selectedButton, setSelectedButton] = useState("За последний месяц")
 
     const handleButtonClick = (buttonName: string) => {
@@ -31,9 +30,9 @@ export default function Burger() {
             </button>
             <nav className={MenuActive(isOpen)}>
                 <ul className={styles.menu_list}>
-                    <button className={styles.menu_item} onClick={() => handleButtonClick("За последний год")}>За последний год</button>
-                    <button className={styles.menu_item} onClick={() => handleButtonClick("За последние 6 месяцев")}>За последние 6 месяцев</button>
-                    <button className={styles.menu_item} onClick={() => handleButtonClick("За последний месяц")}>За последний месяц</button>
+                    {isOpen && selectedButton !== "За последний год" && <button className={styles.menu_item} onClick={() => handleButtonClick("За последний год")}>За последний год</button>}
+                    {isOpen && selectedButton !== "За последние 6 месяцев" && <button className={styles.menu_item} onClick={() => handleButtonClick("За последние 6 месяцев")}>За последние 6 месяцев</button>}
+                    {isOpen && selectedButton !== "За последний месяц" && <button className={styles.menu_item} onClick={() => handleButtonClick("За последний месяц")}>За последний месяц</button>}
                 </ul>
             </nav>
         </div>

@@ -96,31 +96,79 @@
 .ProgBars{
     grid-column-start: 2;
     grid-column-end: 3;
-    width:810px;
-    height:275px;
+    width:780px;
+    height:350px;
     margin-top: 15px;
-    margin-left: 26px;
+    margin-left: 30px;
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
-.ProgBar{
+.ProgBarMonth{
     display: grid;
     grid-template-columns: repeat(31,25px);
     grid-template-rows: 1fr;
 }
-.NumberProg{
-    width:62px;
-    height:24px;
+.ProgBarYear{
+    display: grid;
+    grid-template-columns: repeat(12,68px);
+    grid-template-rows: 1fr;
+}
+.ProgBarHalfYear{
+    display: grid;
+    grid-template-columns: repeat(6,150px);
+    grid-template-rows: 1fr;
+}
+
+.NumberProg {
+    position: relative;
+    width: 62px;
+    height: 24px;
     background: rgba(101, 255, 142, 1);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 2px -17px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s linear;
 }
 
-.NumberProgBar{
-    width:16px;
-    height:275px;
+.NumberProg_hiden {
+    position: relative;
+    width: 62px;
+    height: 24px;
+    background: rgba(101, 255, 142, 1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:  2px -17px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.NumberProgBar {
+    width: 16px;
+    height: 200px;
+    max-height: 275px;
+    min-height: 2px;
     background: rgba(0, 10, 255, 1);
     border-radius: 4px;
-    margin-left: 23px;
+    margin-left: 6px;
+}
+.ParentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.UnderGraph{
+    position: relative;
+    margin: 19px -8px 0px;
+    width: 800px;
+    height: 30px;
 }

@@ -1,4 +1,4 @@
-interface Params {
+interface Roots {
     nickname: string
     finance: Finance
     gift_settings: GiftSettings
@@ -34,7 +34,7 @@ interface Graph {
 }
 
 interface Year {
-    [key: string]: string;
+    [key: string]: any;
     January: any
     February: any
     March: any
@@ -50,7 +50,7 @@ interface Year {
 }
 
 interface HalfYear {
-    [key: string]: string;
+    [key: string]: any;
     January: any
     February: any
     March: any
@@ -60,7 +60,7 @@ interface HalfYear {
 }
 
 interface Month {
-    [key: string]: string;
+    [key: string]: any;
     "1": any
     "2": any
     "3": any
