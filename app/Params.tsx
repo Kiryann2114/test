@@ -1,4 +1,4 @@
-import styles from "@/app/graph/styles/GraphStyle.module.scss";
+import styles from "@/styles/GraphStyle.module.scss";
 
 type Props = {
     params: Roots|undefined;

@@ -1,7 +1,6 @@
 .component{
     width:995px;
     height:476px;
-    background: white;
     display: grid;
     grid-template-rows: 76px 1fr;
     grid-template-columns: repeat(3, 1fr);
@@ -169,6 +168,6 @@
 .UnderGraph{
     position: relative;
     margin: 19px -8px 0px;
-    width: 800px;
+    width: 830px;
     height: 30px;
 }
