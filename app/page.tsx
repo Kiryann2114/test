@@ -80,7 +80,7 @@ function getArrPeriod(style:string,Array:string[]){
     return(
         <div className={style}>
             {Array.map(Item => (
-                <div className={styles.ParentContainer}>
+                <div className={styles.ParentContainer} key={''}>
                     <div className={NumberProgActive(isOpen,Item)}>
                         {loading ? <h3></h3>: <Params params={params} item={Item} graphic={false} period={style}/>}
                     </div>
