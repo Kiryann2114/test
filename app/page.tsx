@@ -18,14 +18,6 @@ export default function GraphPage() {
     return (
         <div className={styles.component}>
             <div className={styles.panelGraph}>
-                <Image
-                    src="/TotalBar.svg"
-                    alt="TotalBar"
-                    className={styles.total}
-                    width={61}
-                    height={280}
-                    priority
-                />
                 <div className={styles.ProgBars}>
                     {GetGraph(selectedButton)}
                 </div>
@@ -75,17 +67,16 @@ function getArrPeriod(style:string,Array:string[]){
         getParams().then(setParams).finally(() => setLoading(false))
     },[]);
 
-    let total: number = 0;
-
     return(
         <div className={style}>
             {Array.map(Item => (
                 <div className={styles.ParentContainer} key={''}>
+                    {loading || Item!=Array[0] ? <h3></h3>: <Params params={params} arr={Array} item={Item} graphic={false} leftgraph={true} period={style}/>}
                     <div className={NumberProgActive(isOpen,Item)}>
-                        {loading ? <h3></h3>: <Params params={params} item={Item} graphic={false} period={style}/>}
+                        {loading ? <h3></h3>: <Params params={params} arr={Array} item={Item} graphic={false} leftgraph={false} period={style}/>}
                     </div>
                     <div onMouseMove={() => setOpen(Item)} onMouseOut={() => setOpen("-1")}>
-                        {loading ? <h3></h3>: <Params params={params} item={Item} graphic={true} period={style}/>}
+                        {loading ? <h3></h3>: <Params params={params} arr={Array} item={Item} graphic={true} leftgraph={false} period={style}/>}
                     </div>
                 </div>
             ))}
